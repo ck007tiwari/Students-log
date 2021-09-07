@@ -46,10 +46,10 @@ mongoose.connect('mongodb://localhost:27017/studentLog', { useNewUrlParser: true
          achived: 'Working ON',
       },
       {
-         name: 'Rakesh',
-         cardNo:111,
+         name: 'Rakesh Yadav',
+         cardNo:0556,
          purpose: 'Competition',
-         for : 'SSC CGL',
+         for : 'SSC',
          join:2018,
          achived: 'Working ON',
       },

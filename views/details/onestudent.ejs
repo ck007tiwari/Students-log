@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title><%= student.name  %> </title>
+</head>
+<body>
+   <h1>Student Details</h1>
+   <section>
+      <ul>
+         <li><h3> Name :<%=  student.name %> </h3></li>
+         <li><h3> Card No :<%=  student.cardNo %> </h3></li>
+         <li><h3> Purpose :<%=  student.purpose %> </h3></li>
+         <li><h3> For :<%=  student.for %> </h3></li>
+         <li><h3> For :<%=  student.join %> </h3></li>
+         <li><h3> For :<%=  student.achived %> </h3></li>
+      </ul>
+   </section>
+   <br>
+   <a href="/students/<%= student._id %>/edit ">Edit Details</a>
+   <br>
+   <br>
+   <a href="/students"> Students List</a>
+</body>
+</html>
