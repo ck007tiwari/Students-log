@@ -10,7 +10,7 @@ mongoose.connect('mongodb://localhost:27017/studentLog', { useNewUrlParser: true
       console.log(err);   
    })
 
-   //To insert one by one 
+   // To insert one by one 
    // const s= new Student({
    //    name: 'Tiwari',
    //    cardNo:4661,

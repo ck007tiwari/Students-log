@@ -5,8 +5,8 @@ const { text} = require('express');
 
 const path = require('path');
 app.set('views', path.join(__dirname,'views'));
-
 app.set('view engine', 'ejs');
+
 app.use(express.urlencoded({   extended: true   }));
 app.use(express.json());
 const Student = require('./models/students');
@@ -14,7 +14,7 @@ const Student = require('./models/students');
 mongoose.connect('mongodb://localhost:27017/studentLog', {      useNewUrlParser: true,   })
    .then(() => {
       console.log('Connection ON with MONGO');   
-   })
+   })   
    .catch(err => { 
       console.log('Mongo Connection error');    
       console.log(err);   
@@ -25,7 +25,10 @@ mongoose.connect('mongodb://localhost:27017/studentLog', {      useNewUrlParser:
    })
 
    app.get('/students', async (req,res)=>{
+      // console.log(req.body);
+      // console.log(req.params);
       const students = await Student.find({});
+      console.log(students);
       res.render('details/details', {students});// here we are sending students  value to " details/details " this location where we can access them.
    });
 
