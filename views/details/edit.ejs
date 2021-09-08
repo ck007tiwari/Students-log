@@ -11,30 +11,30 @@
 <body>
    <h1>DPL Ashok vihar</h1>
    <h3> Editing  New student </h3>
-   <form action="/students " method="POST">
+   <form action="/students/<%=student._id%>?_method=PUT" method="POST">
 
       <label for="name">Enter Your Name</label>
       <input type="text" placeholder="Name" id="name" name="name" value="<%= student.name %>">
 <br>
       <label for="card" >Enter Your Card No : </label>
-      <input type="number" placeholder="Card No" id="card" name="cardNo" value="<%= student.cardNo %>>
+      <input type="number" placeholder="Card No" id="card" name="cardNo" value="<%= student.cardNo %>">
       <br>
       <br>
       <label for="pur">Purpose of Study</label>
-      <select name="purpose" id="pur" name="purpose">
+      <select name="purpose" id="pur" name="purpose" value="<%= student.purpose %>">
          <option value="UPSC">UPSC</option>
          <option value="Competiton">Competiton</option>
          <option value="Academic">Academic</option>
          <option value="Job Oreanted">Job Oreanted</option>
       </select>
       <label for="for"> Competiton Field </label>
-      <input type="text" placeholder="Competiton Field" id="for" name="for">
+      <input type="text" placeholder="Competiton Field" id="for" name="for" value="<%= student.for %>">
       <br>
       <br> 
       <label for="join"> Library Joining year</label>
-      <input type="number" placeholder="Join" id="join" name="join">
+      <input type="number" placeholder="Join" id="join" name="join"value="<%= student.join %>" >
       <label for="achi"> Goal Achived :</label>
-      <select name="achived" id="achi">
+      <select name="achived" id="achi" value="<%= student.achived %>">
          <option value="YES">Yes</option>
          <option value="NO">NO</option>
          <option value="Working ON">Working ON</option>
