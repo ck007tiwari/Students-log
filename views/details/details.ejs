@@ -7,15 +7,15 @@
    <title>All Students</title>
 </head>
 <body>
-   <h1>Students Details-</h1>
+   <h1><%= purpose %> Student!! </h1>
    <ol>
       <% for(let rrr of students){ %>
          <li><a href="/students/<%=rrr._id%>"><%= rrr.name %></a></li>
       <% } %> 
    </ol>
    <a href="/students/new"> Adding new student</a>
-   
-   
+   <br>
+   <a href="/students"> All Students</a>
    
    
 </body>
